@@ -213,13 +213,6 @@ def eval_bert(article_model, title_model, LR, loader, tokenizer, lstm_article=No
 
     accuracy, microPrecision, microRecall, microF1 = getMetrics(pred, gold, verbose=True)
 
-    label2is_hyper = ["false", "true"]
-    pred = (pred > 0.5) * 1
-    with open('{}/{}'.format("nfolds_prediction", 'predict_'+str(accuracy)+'.txt'), 'w') as result_file:
-        for idx, pre in zip(id, pred):
-            pred_info = "{}\t{}\n".format(idx, label2is_hyper[pre])
-            result_file.write(pred_info)
-        print("file predict_{}.txt has been written into nfolds_prediction folder".format(accuracy))
     if writer!=None:
         phase_name='test' if isTest else 'val'
         writer.add_scalars(phase_name, {'acc': accuracy,'prec': microPrecision,'f1': microF1}, global_steps)

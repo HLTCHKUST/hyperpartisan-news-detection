@@ -76,11 +76,11 @@ parser.add_argument("--hier_dim_word", type=int, default=100)
 parser.add_argument("--hier_dim_sent", type=int, default=100)
 
 # choices
-parser.add_argument("--do_train", type=bool, default=False)
-parser.add_argument("--do_predict", type=bool, default=False)
-parser.add_argument("--do_eval_bert_plus_lstm", type=bool, default=False)
-parser.add_argument("--do_cross_validation", type=bool, default=False)
-
+parser.add_argument("--do_train", action="store_true")
+parser.add_argument("--do_predict", action="store_true")
+parser.add_argument("--do_eval_bert_plus_lstm", action="store_true")
+parser.add_argument("--do_cross_validation", action="store_true")
+parser.add_argument("--bert_from_scratch", action="store_true")
 
 parser.add_argument("--aug_count", type=str, default="")
 
@@ -93,6 +93,7 @@ do_train = arg.do_train
 do_predict = arg.do_predict
 do_eval_bert_plus_lstm = arg.do_eval_bert_plus_lstm
 do_cross_validation = arg.do_cross_validation
+bert_from_scratch = arg.bert_from_scratch
 
 # Hyperparameters
 hidden_dim= arg.hidden_dim

@@ -128,8 +128,9 @@ def train(aug_count=""):
         from pytorch_pretrained_bert import BertTokenizer, BertModel
         tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         bert_model = BertModel.from_pretrained('bert-base-uncased')
-        state = torch.load("bert_model/pytorch_model.bin")
-        bert_model.load_state_dict(state)
+        if not constant.bert_from_scratch:
+            state = torch.load("bert_model/pytorch_model.bin")
+            bert_model.load_state_dict(state)
         article_model = bert_model
         title_model = bert_model
         # print("finish bert model loading")
@@ -371,8 +372,9 @@ def cross_validation(kfold=10):
         from pytorch_pretrained_bert import BertTokenizer, BertModel
         tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         bert_model = BertModel.from_pretrained('bert-base-uncased')
-        state = torch.load("bert_model/pytorch_model.bin")
-        bert_model.load_state_dict(state)
+        if not constant.bert_from_scratch:
+            state = torch.load("bert_model/pytorch_model.bin")
+            bert_model.load_state_dict(state)
         article_model = bert_model
         title_model = bert_model
         if constant.use_bert_plus_lstm:
