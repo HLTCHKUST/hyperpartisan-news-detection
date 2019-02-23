@@ -82,6 +82,10 @@ parser.add_argument("--do_eval_bert_plus_lstm", action="store_true")
 parser.add_argument("--do_cross_validation", action="store_true")
 parser.add_argument("--bert_from_scratch", action="store_true")
 
+# tira
+parser.add_argument("--input_path", type=str, default="")
+parser.add_argument("--output_path", type=str, default="")
+
 parser.add_argument("--aug_count", type=str, default="")
 
 arg = parser.parse_args()
@@ -94,6 +98,10 @@ do_predict = arg.do_predict
 do_eval_bert_plus_lstm = arg.do_eval_bert_plus_lstm
 do_cross_validation = arg.do_cross_validation
 bert_from_scratch = arg.bert_from_scratch
+
+# tira
+input_path = arg.input_path
+output_path = arg.output_path
 
 # Hyperparameters
 hidden_dim= arg.hidden_dim

@@ -1,3 +1,6 @@
 .ipynb_checkpoints
-data
+data/
+data_new/
+bert_model/
+lstm_model/
 __pycache__/

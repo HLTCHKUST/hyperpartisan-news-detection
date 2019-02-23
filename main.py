@@ -149,21 +149,18 @@ def train(aug_count=""):
                         hidden_size=constant.hidden_dim, 
                         num_layers=constant.n_layers,
                         pretrain_emb=constant.pretrain_emb,
-                        use_attn=constant.use_attn
                         )
         title_model = models.LSTM(vocab=vocab,
                         embedding_size=constant.emb_dim,
                         hidden_size=constant.hidden_dim_tit,
                         num_layers=constant.n_layers,
                         pretrain_emb=constant.pretrain_emb,
-                        use_attn=constant.use_attn
                         )
 #         LR = models.LR(hidden_dim1=constant.hidden_dim, hidden_dim2=constant.hidden_dim_tit)
         LR = models.Classifier(hidden_dim1=constant.hidden_dim, hidden_dim2=constant.hidden_dim_tit)
 
-        article_model = load_model(article_model, model_name="LstmAr_LstmTit_att_batchnorm_lstm_alr0.0005_tlr0.005_lrlr0.001_opadam_article_model")
-        title_model = load_model(title_model, model_name="LstmAr_LstmTit_att_batchnorm_lstm_alr0.0005_tlr0.005_lrlr0.001_opadam_title_model")
-        LR = load_model(LR, model_name="LstmAr_LstmTit_att_batchnorm_lstm_alr0.0005_tlr0.005_lrlr0.001_opadam_LR")
+        article_model = load_model(article_model, model_name="article_model")
+        title_model = load_model(title_model, model_name="title_model")
         
     if constant.USE_CUDA:
         article_model.cuda()
@@ -292,7 +289,7 @@ def train(aug_count=""):
                     torch.save(LR.state_dict(), "bert_model/by_publisher/classifier_bypublisher_"+str(constant.hidden_dim)+"_"+str(constant.hidden_dim_tit)+"_"+str(test_best)+".bin")
                     print("The lstm_article lstm_title classifier_bypublisher have been saved!")
                 else:
-                    torch.save(LR.state_dict(), "bert_model/finetune_classi_"+str(accuracy)+".bin")
+                    torch.save(LR.state_dict(), "bert_model/finetune_classi_for_tunebert_"+str(accuracy)+".bin")
                     print("The fine tune classifier has been saved!")
             else:
                 cnt += 1
