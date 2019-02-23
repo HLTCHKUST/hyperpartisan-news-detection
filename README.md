@@ -1,5 +1,5 @@
 # hyperpartisan-news-detection
-This repository is for the paper in SemEval 2019 Task 4: Hyperpartisan News Detection (title) (paper link)
+This repository is for the paper in SemEval 2019 Task 4: Hyperpartisan News Detection (Hyperpartisan News Detection by de-noising weakly-labeled data)
 
 ## Fine-tune BERT Language Model
 Process hyperpartisan news dataset first (for BERT language model training).
