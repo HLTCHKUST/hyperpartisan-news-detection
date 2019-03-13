@@ -8,7 +8,7 @@ Process hyperpartisan news dataset first (for BERT language model training).
 python process_data_for_bert_training.py
 ```
 
-Use processed hyperpartisan news articles to train BERT language model.
+Use processed hyperpartisan news articles to train BERT language model. (run_lm_finetuning.py comes from https://github.com/huggingface/pytorch-pretrained-BERT)
 
 ```
 python run_lm_finetuning.py --train_file=data_new/article_corpus.txt --output_dir=bert_model --bert_model=bert-base-uncased --do_train --on_memory
