@@ -15,11 +15,10 @@ python run_lm_finetuning.py --train_file=data_new/article_corpus.txt --output_di
 ```
 
 ## Train BERT + Classifier for denoising
-Use by-article data to train LR (BERT LM model is freezed)
+Use by-article data to train Classifier (BERT LM model is freezed) for denoising by-publisher data
 ```
 python main --do_train --use_bert --batch_size=16
 ```
-Use BERT + LR to denoise by-publisher data
 
 ## Train BERT + LSTM + Classifier by denoised by-publisher data
 ```
