@@ -17,7 +17,7 @@ python run_lm_finetuning.py --train_file=data_new/article_corpus.txt --output_di
 ## Train BERT + LR for denoising
 Use by-article data to train LR (BERT LM model is freezed)
 ```
-python main --do_train --use_bert --hidden_dim=300 --hidden_dim_tit=100 --batch_size=16
+python main --do_train --use_bert --batch_size=16
 ```
 Use BERT + LR to denoise by-publisher data
 
