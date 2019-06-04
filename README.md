@@ -5,7 +5,7 @@ The architecture of our proposed system:
 ![alt text](architecture.png)
 
 ## Getting Started
-The following scripts describe how to train and test our model:
+The following scripts describe how to train and test our model. This repository also contains character based feature and url based feature for further research.
 
 ### Fine-tune BERT Language Model
 We fine-tune BERT language model on the large amount of hyperpartisan news dataset. 
@@ -41,3 +41,23 @@ python main.py --do_train --train_cleaner_dataset --hidden_dim=300 --hidden_dim_
 ```
 python main.py --do_eval_bert_plus_lstm --train_cleaner_dataset --hidden_dim=300 --hidden_dim_tit=100 --batch_size=16 
 ```
+
+## Reference
+If you find our idea or the resources in this repository very useful, please cite the following paper:
+```
+@inproceedings{lee-etal-2019-team,
+    title = "Team yeon-zi at {S}em{E}val-2019 Task 4: Hyperpartisan News Detection by De-noising Weakly-labeled Data",
+    author = "Lee, Nayeon  and
+      Liu, Zihan  and
+      Fung, Pascale",
+    booktitle = "Proceedings of the 13th International Workshop on Semantic Evaluation",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/S19-2184",
+    pages = "1052--1056",
+    abstract = "This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8{\%} accuracy in the final by-article dataset without ensemble learning.",
+}
+```
+
