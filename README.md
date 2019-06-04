@@ -10,7 +10,7 @@ The following scripts describe how to train and test our model. This repository 
 ### Fine-tune BERT Language Model
 We fine-tune BERT language model on the large amount of hyperpartisan news dataset. 
 
-First, process hyperpartisan news dataset first.
+First, process hyperpartisan news dataset.
 ```
 python process_data_for_bert_training.py
 ```
