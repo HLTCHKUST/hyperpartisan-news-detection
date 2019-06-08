@@ -24,7 +24,7 @@ This code has been written using PyTorch >= 0.4.1. If you find our idea or the r
 </pre>
 
 ## Abstract
-This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8{\%} accuracy in the final by-article dataset without ensemble learning.
+This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8% accuracy in the final by-article dataset without ensemble learning.
 
 ## Model Architecture
 ![alt text](architecture.png)
