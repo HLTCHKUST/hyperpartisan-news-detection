@@ -19,7 +19,7 @@ This code has been written using PyTorch >= 0.4.1. If you find our idea or the r
     publisher = "Association for Computational Linguistics",
     url = "https://www.aclweb.org/anthology/S19-2184",
     pages = "1052--1056",
-    abstract = "This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8{\%} accuracy in the final by-article dataset without ensemble learning.",
+    abstract = "This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8% accuracy in the final by-article dataset without ensemble learning.",
 }
 </pre>
 
