@@ -7,19 +7,12 @@ This repository is for the paper in SemEval 2019 Task 4: Hyperpartisan News Dete
 
 This code has been written using PyTorch >= 0.4.1. If you find our idea or the resources in this repository very useful, please cite the following paper. The bibtex is listed below:
 <pre>
-@inproceedings{lee-etal-2019-team,
-    title = "Team yeon-zi at {S}em{E}val-2019 Task 4: Hyperpartisan News Detection by De-noising Weakly-labeled Data",
-    author = "Lee, Nayeon  and
-      Liu, Zihan  and
-      Fung, Pascale",
-    booktitle = "Proceedings of the 13th International Workshop on Semantic Evaluation",
-    month = jun,
-    year = "2019",
-    address = "Minneapolis, Minnesota, USA",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/S19-2184",
-    pages = "1052--1056",
-    abstract = "This paper describes our system that has been submitted to SemEval-2019 Task 4: Hyperpartisan News Detection. We focus on removing the noise inherent in the hyperpartisanship dataset from both data-level and model-level by leveraging semi-supervised pseudo-labels and the state-of-the-art BERT model. Our model achieves 75.8% accuracy in the final by-article dataset without ensemble learning.",
+@inproceedings{lee2019team,
+  title={Team yeon-zi at SemEval-2019 Task 4: Hyperpartisan News Detection by De-noising Weakly-labeled Data},
+  author={Lee, Nayeon and Liu, Zihan and Fung, Pascale},
+  booktitle={Proceedings of the 13th International Workshop on Semantic Evaluation},
+  pages={1052--1056},
+  year={2019}
 }
 </pre>
 
